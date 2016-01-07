@@ -10,10 +10,17 @@ otp_release:
   - 17.0
 cache:
   directories:
+  - $HOME/otp/18.2
+  - $HOME/otp/18.1
+  - $HOME/otp/18.0
+  - $HOME/otp/17.5
+  - $HOME/otp/17.4
+  - $HOME/otp/17.3
+  - $HOME/otp/17.0
   - $HOME/.cache/rebar3
   - _plt
 install: "true"
-script: "make"
+script: "make testclean dist"
 
 
 
