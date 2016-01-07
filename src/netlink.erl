@@ -33,6 +33,7 @@
 
 -include("log.hrl").
 -include("netlink.hrl").
+-include("netlink_types.hrl").
 -include("netl_codec.hrl").
 
 -define(SERVER, ?MODULE).
@@ -61,7 +62,7 @@
 	{
 	  name     :: if_name(),          %% interface name
 	  index    :: non_neg_integer(),  %% interface index
-	  attr     :: dict:dict()              %% attributes {atom(),term}
+	  attr     :: ?dict()              %% attributes {atom(),term}
 	}).
 
 -record(addr,
@@ -69,7 +70,7 @@
 	  addr     :: if_addr(),          %% the address
 	  name     :: if_name(),          %% interface label
 	  index    :: non_neg_integer(),  %% interface index
-	  attr     :: dict:dict()              %% attributes
+	  attr     :: ?dict()              %% attributes
 	}).
 
 -record(subscription,
